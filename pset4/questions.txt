@@ -1,0 +1,22 @@
+0.  JPEG, PNG supports 16.8 million colors, GIF supports 256 colors, BMP supports over 4.2 billion colors 
+1.  GIFs support animation
+2.  A lossy compression makes the file smaller while sacrificing data. Lossless compression makes the file 
+    smaller using an algorithim so nothing is lost and the full data can be retrieved
+3.  A JPEG is lossy compressed
+4.  Essentially the metadata for that file is deleted, but the byte configuration existent in the memory remains the same.
+5.  Use proprietary software to overwrite the entire drive with null values or randomized values, which hopefully erases 
+    all traces of your file. This does not necessarily get around the Gutmann issue raised in the article though.
+6.  It's a C library that contains functions for working with ints.
+7.  These naming conventions leave little ambiguity as to the size and scope of each object type.
+8.  1, 4, 4, 2
+9.  BM
+10. bfSize would be the size of the image plus the header while biSize is the size of the header
+11. This means the origin is in the top left corner (positive or negative changes how the image is rendered in the bmp)
+12. biClrUsed
+13. Perhaps the user does not have write permissions in that directory
+14. Because we are using fread to only read in 1 element at a time (hence always a 1 for the third argument)
+15. Padding would be 3
+16. Fseek allows you to move to a new pointer in your program using offsets to data positions in your program 
+(e.g. beginning of the program, the current location of the program, or the end of the program)
+17. SEEK_CUR refers to the pointer position at the current location of the program. SEEK_CUR is then offset using fseek
+18. Rick Astley!

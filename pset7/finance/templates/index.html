@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <form action="{{ url_for('index') }}" method="get">
+        <fieldset>
+            <table style="width:120%" align="center">
+            <table border="1" cellpadding="5" cellspacing="5" align= "center">
+                <col width="200">
+                <col width="300">
+                <col width="200">
+  <tr>
+    <td style="font-weight:bold" align="center">Symbol</td>
+    <td style="font-weight:bold" align="center">Number of Shares</td> 
+    <td style="font-weight:bold" align="center">Value</td>
+  </tr>
+  {% for row in rows%}
+      <tr>
+          <td align="center">{{row.stock}}</td>
+          <td align="center">{{row.quantity}}</td>
+          <td align="center">{{row.price}}</td>
+      </tr>
+    {% endfor %}
+    <tr>
+        <td>Cash</td>
+        <td></td>
+        <td>{{cash}}</td>
+        
+    </tr>
+        </fieldset>
+    </form>
+{% endblock %}

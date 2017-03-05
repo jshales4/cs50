@@ -1,0 +1,9 @@
+questions.txt
+
+Computer Science 50
+Problem Set 3
+
+0. It allows square grids from 3x3 to 9x9 (meaning 3x3 is the smallest grid, 9x9 is the largest allowed)
+1. A 2-dimensional array
+2. greet();
+3. init(); draw(); move(); won();

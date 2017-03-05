@@ -1,0 +1,34 @@
+0.  Pneumonoultramicroscopicsilicovolcanoconiosis is a long word that
+refers to a type of disease from inhaling fine ash into the lungs.
+1.  GetRUsage() is a function that returns usage statistics for a given input (typically a 
+process or a process and all of its child processes)
+2.  16 members
+3.  When using structs as inputs to a function C prefers we pass references to those structs, 
+not the structs themselves for efficiency
+4.  Main loads whatever dictionary has been stated in the declaration of main. It then saves and measures the memory usage difference
+from loading the dictionary.
+We establish a file connection to whatever document we are iterating through checking the spelling of a word. Once connected
+main goes through the file and adds characters to an array "word" until it meets conditions that the word is finished. Once a word
+is found, we compare it to the dictionary in whatever method I will soon define for that comparison. If it does not exist in the
+dictionary, it is a word that is misspelled, so we add it to the array of misspellings. We then continue our adding in of words
+until the end of the file is reached.
+5.  There are quite a few criteria that have to be met for valid words (length requirements, only certain types of characters)
+Using fgetc we can insure that each character of the string is checked and valid, and not produce any false negatives/mispellings just because
+we read a character in incorrectly.
+6.  Having const attached to the parameters to a function just mean that the parameters cannot be changed inside of the function
+This can be used to avoid mistakes and may improve runtime/performance of the function (?) Adjusting the inputs to either function
+(dictionary or word) could be a problem and so we don't allow the functions to do it. Also if this improves performance as 
+stack overflow suggests this could help with our faster/more efficient runtime requirement outlined in the specifications of
+this problem set.
+7.  I used a hashtable of 3000 (arbitrarily determined #) nodes, where a node is a
+pointer/string pair. I set up a system in this hashtable that created a linked list based
+on collisions that may occur. When looking for a word in my dictionary, I hash the word
+and then check that node in the hashtable. If it isn't null, i iterate through the linked
+list and see if the word exists in the dictionary. 
+8.  My initial run was 10 seconds. I have reduced the time by changing the size of my hashtable.
+9.  Changing the size of my hashtable, changing the method of checking the words(I was
+originally using a recursive method with unanticipated results, so opting for a method
+of while loop was a better solution). This project went through many stages.
+10. I do feel like it could work faster/more efficiently. I am very curious to see the optimal level of hashtable nodes,
+it would be relatively easy to test iteratively. But that the code achieves the objective I am happy
+and thankful. I would also be curious to see if different hash functions than the one I selected work better or worse.
